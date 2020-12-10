@@ -1,6 +1,101 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+svg {
+  height: 15vh;
+  width: 100vw;
+}
+
+.nav-fields {
+  width: 100%;
+}
+
+.nav-text {
+  display: flex;
+  position: absolute;
+  margin-right: 30px;
+  top: 20px;
+  right: 0;
+  width: 65vw;
+  justify-content: space-around;
+  font-size: 26px;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #151e68;
+}
+
+.nav-text a {
+  color: #151e68;
+  text-decoration: none;
+}
+
+.iitgoalogo {
+  position: absolute;
+  top: 1px;
+  left: -15px;
+}
+.iitgoalogo img {
+  width: 11rem;
+}
+
+.ham-div {
+  display: none;
+}
+
+.hamburger {
+  position: absolute;
+  right: 70px;
+  font-size: 35px;
+  top: 15px;
+
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1039px) {
+  .nav-text {
+    flex-direction: column;
+    background-color: #b9b9ce;
+    color: #151e68;
+    width: 100vw;
+    margin: 0;
+    top: -50vh;
+    height: 50vh;
+    align-items: center;
+    transition: 0.5s ease-in-out all;
+  }
+
+  .ham-div {
+    position: relative;
+
+    display: block;
+  }
+
+  .nav-text.active {
+    top: 0vh;
+  }
+  .hamburger {
+    color: #151e68;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .iitgoalogo {
+    left: -35px;
+    top: 5px;
+  }
+  .iitgoalogo img {
+    width: 10rem;
+  }
+}
+
 .faq__body {
   overflow: scroll;
-  overflow-x: hidden;
+  overflow: hidden;
   background-image: url("../images/background_img.svg");
   background-size: cover; /* <------ */
   background-repeat: no-repeat;
@@ -13,7 +108,9 @@
 }
 
 .faq__container {
+  padding-top: 200px;
   overflow: scroll;
+  height: 100%;
 }
 .faq__question__div {
   color: white;
@@ -29,10 +126,10 @@
 .faq__answer__text {
 }
 .faq__question__visible {
-  height: 70px;
+  min-height: 70px;
 }
 .faq__answer__visible {
-  height: 170px;
+  min-height: 170px;
 }
 .visible {
   visibility: visible;
